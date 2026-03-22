@@ -10,71 +10,43 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .title-font { font-family: 'Space Grotesk', sans-serif; }
-        .hero-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
-        }
-        .robot-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-hover:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-        }
-        .chat-bubble {
-            max-width: 75%;
-            padding: 14px 18px;
-            border-radius: 20px;
-        }
-        .section-title {
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(to right, #3b82f6, #60a5fa);
-            border-radius: 9999px;
-        }
+        .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
+        .robot-float { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+        .chat-bubble { max-width: 75%; padding: 14px 18px; border-radius: 20px; }
+        .section-title::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 60px; height: 4px; background: linear-gradient(to right, #10b981, #34d399); border-radius: 9999px; }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
+
     <!-- NAVBAR -->
     <nav class="fixed top-0 w-full bg-zinc-950/90 backdrop-blur-lg z-50 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl">🤖</div>
+                <div class="w-9 h-9 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl">🤖</div>
                 <h1 class="title-font text-2xl font-semibold tracking-tight">ИИ в нашей жизни</h1>
             </div>
             <div class="flex gap-8 text-sm font-medium">
-                <a href="#what" class="hover:text-blue-400 transition-colors">Что такое ИИ</a>
-                <a href="#daily" class="hover:text-blue-400 transition-colors">Каждый день</a>
-                <a href="#pros" class="hover:text-blue-400 transition-colors">Плюсы и минусы</a>
-                <a href="#future" class="hover:text-blue-400 transition-colors">Будущее</a>
-                <a href="#chat" class="hover:text-blue-400 transition-colors">Диалог с ИИ</a>
+                <a href="#what" class="hover:text-emerald-400 transition-colors">Что такое ИИ</a>
+                <a href="#daily" class="hover:text-emerald-400 transition-colors">Каждый день</a>
+                <a href="#pros" class="hover:text-emerald-400 transition-colors">Плюсы и минусы</a>
+                <a href="#future" class="hover:text-emerald-400 transition-colors">Будущее</a>
+                <a href="#chat" class="hover:text-emerald-400 transition-colors">Диалог с ИИ</a>
             </div>
-            <a href="https://github.com" target="_blank" 
-               class="px-5 py-2 bg-white text-zinc-950 rounded-2xl font-semibold text-sm flex items-center gap-2 hover:bg-blue-400 hover:text-white transition-all">
+            <a href="https://github.com" target="_blank" class="px-5 py-2 bg-white text-zinc-950 rounded-2xl font-semibold text-sm flex items-center gap-2 hover:bg-emerald-400 hover:text-white transition-all">
                 <i class="fab fa-github"></i> GitHub
             </a>
         </div>
     </nav>
 
-    <!-- HERO (страница 1) -->
+    <!-- HERO -->
     <section class="hero-bg min-h-screen flex items-center pt-20">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-8">
                 <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur rounded-full text-sm">
-                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
                     9 класс • МБОУ Лицей №12
                 </div>
                 <h1 class="title-font text-6xl lg:text-7xl font-bold leading-none tracking-tighter">
@@ -84,7 +56,7 @@
                 
                 <div class="bg-white/5 backdrop-blur p-6 rounded-3xl border border-white/10">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center text-3xl">👨‍🎓</div>
+                        <div class="w-12 h-12 bg-emerald-500/20 rounded-2xl flex items-center justify-center text-3xl">👨‍🎓</div>
                         <div>
                             <p class="font-semibold">Автор проекта</p>
                             <p class="text-lg">Амирзянов Динар Айдарович</p>
@@ -94,18 +66,14 @@
                     <p class="text-sm text-zinc-400">23.03.2026</p>
                 </div>
                 
-                <a href="#what" 
-                   class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-3xl text-lg font-semibold transition-all">
+                <a href="#what" class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 px-8 py-4 rounded-3xl text-lg font-semibold transition-all">
                     Узнать больше <i class="fas fa-arrow-down"></i>
                 </a>
             </div>
             
-            <!-- Робот (из презентации) -->
             <div class="relative flex justify-center">
                 <div class="robot-float relative w-full max-w-md">
-                    <img src="https://picsum.photos/id/1015/600/600" 
-                         alt="Робот на скамейке" 
-                         class="rounded-3xl shadow-2xl border border-white/10">
+                    <img src="https://picsum.photos/id/1015/600/600" alt="Робот на скамейке" class="rounded-3xl shadow-2xl border border-white/10">
                     <div class="absolute bottom-10 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur px-6 py-3 rounded-2xl text-center text-sm">
                         <p class="font-medium">Нейросети &amp; Будущее</p>
                         <p class="text-xs text-zinc-400">Как алгоритмы помогают учиться, общаться и открывать новое</p>
@@ -115,302 +83,182 @@
         </div>
     </section>
 
-    <!-- ЧТО ТАКОЕ ИИ (страница 2) -->
+    <!-- ЧТО ТАКОЕ ИИ -->
     <section id="what" class="py-24 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="section-title text-5xl font-bold mb-4">Что такое искусственный интеллект?</h2>
             <p class="max-w-2xl text-zinc-400 text-lg mb-16">Искусственный интеллект (ИИ) — это способность компьютерных программ выполнять задачи, которые обычно требуют человеческого ума.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Карточки из презентации -->
                 <div class="bg-zinc-800/50 p-8 rounded-3xl card-hover border border-white/5">
                     <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 text-4xl">📚</div>
                     <h3 class="text-2xl font-semibold mb-3">Машинное обучение</h3>
                     <p class="text-zinc-400">Программа не следует жёстким инструкциям, а учится на тысячах примеров.</p>
                 </div>
-                
                 <div class="bg-zinc-800/50 p-8 rounded-3xl card-hover border border-white/5">
                     <div class="w-12 h-12 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 text-4xl">🧠</div>
                     <h3 class="text-2xl font-semibold mb-3">Нейросети</h3>
-                    <p class="text-zinc-400">Модели, вдохновлённые устройством нашего мозга. Отлично работают с картинками и звуком.</p>
+                    <p class="text-zinc-400">Модели, вдохновлённые устройством нашего мозга.</p>
                 </div>
-                
                 <div class="bg-zinc-800/50 p-8 rounded-3xl card-hover border border-white/5">
                     <div class="w-12 h-12 bg-pink-500/10 rounded-2xl flex items-center justify-center mb-6 text-4xl">🎨</div>
                     <h3 class="text-2xl font-semibold mb-3">Генеративный ИИ</h3>
-                    <p class="text-zinc-400">Создаёт абсолютно новый контент: тексты, рисунки, музыку и видео.</p>
+                    <p class="text-zinc-400">Создаёт тексты, рисунки, музыку и видео.</p>
                 </div>
-                
                 <div class="bg-zinc-800/50 p-8 rounded-3xl card-hover border border-white/5">
                     <div class="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 text-4xl">🔍</div>
                     <h3 class="text-2xl font-semibold mb-3">Структура сети</h3>
-                    <p class="text-zinc-400">Каждый «узел» нейросети обрабатывает часть информации, передавая результат дальше, подобно нейронам в мозге человека.</p>
+                    <p class="text-zinc-400">Каждый узел работает как нейрон в мозге человека.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ГДЕ ВСТРЕЧАЕМ ИИ КАЖДЫЙ ДЕНЬ (страница 3) -->
+    <!-- ГДЕ ВСТРЕЧАЕМ ИИ -->
     <section id="daily" class="py-24 bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="section-title text-5xl font-bold mb-4">Где мы встречаем ИИ каждый день</h2>
-            <p class="text-zinc-400 text-lg max-w-md mb-12">Искусственный интеллект уже стал незаметным, но незаменимым помощником в самых разных сферах нашей жизни.</p>
+            <p class="text-zinc-400 text-lg max-w-md mb-12">Искусственный интеллект уже стал незаметным, но незаменимым помощником.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Образование -->
-                <div class="bg-gradient-to-br from-blue-900/30 to-transparent p-8 rounded-3xl border border-blue-500/20">
-                    <div class="flex items-center gap-3 mb-6">
-                        <i class="fas fa-graduation-cap text-3xl text-blue-400"></i>
-                        <h3 class="text-2xl font-semibold">Образование</h3>
-                    </div>
-                    <ul class="space-y-4 text-zinc-300">
-                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Персональные подсказки и объяснения сложных тем</li>
-                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Умная проверка орфографии (Grammarly, LanguageTool)</li>
-                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Адаптивные тренажёры (Duolingo)</li>
-                    </ul>
-                </div>
-                
-                <!-- Медицина -->
-                <div class="bg-gradient-to-br from-red-900/30 to-transparent p-8 rounded-3xl border border-red-500/20">
-                    <div class="flex items-center gap-3 mb-6">
-                        <i class="fas fa-heart text-3xl text-red-400"></i>
-                        <h3 class="text-2xl font-semibold">Медицина</h3>
-                    </div>
-                    <ul class="space-y-4 text-zinc-300">
-                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Помощь врачам в расшифровке снимков</li>
-                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Умные часы: мониторинг пульса</li>
-                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Чат-боты для записи к врачу</li>
-                    </ul>
-                </div>
-                
-                <!-- Транспорт -->
                 <div class="bg-gradient-to-br from-emerald-900/30 to-transparent p-8 rounded-3xl border border-emerald-500/20">
-                    <div class="flex items-center gap-3 mb-6">
-                        <i class="fas fa-car text-3xl text-emerald-400"></i>
-                        <h3 class="text-2xl font-semibold">Транспорт</h3>
-                    </div>
+                    <div class="flex items-center gap-3 mb-6"><i class="fas fa-graduation-cap text-3xl text-emerald-400"></i><h3 class="text-2xl font-semibold">Образование</h3></div>
                     <ul class="space-y-4 text-zinc-300">
-                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Навигаторы с учётом пробок (Яндекс, Google)</li>
-                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Ассистенты водителя</li>
-                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Прогноз прибытия транспорта</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Персональные подсказки</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Grammarly и Duolingo</li>
                     </ul>
                 </div>
-                
-                <!-- Развлечения -->
-                <div class="bg-gradient-to-br from-purple-900/30 to-transparent p-8 rounded-3xl border border-purple-500/20">
-                    <div class="flex items-center gap-3 mb-6">
-                        <i class="fas fa-gamepad text-3xl text-purple-400"></i>
-                        <h3 class="text-2xl font-semibold">Развлечения и быт</h3>
-                    </div>
+                <div class="bg-gradient-to-br from-red-900/30 to-transparent p-8 rounded-3xl border border-red-500/20">
+                    <div class="flex items-center gap-3 mb-6"><i class="fas fa-heart text-3xl text-red-400"></i><h3 class="text-2xl font-semibold">Медицина</h3></div>
                     <ul class="space-y-4 text-zinc-300">
-                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Рекомендации YouTube, Spotify, Netflix</li>
-                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Умные колонки (Алиса, Siri)</li>
-                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Фильтры и маски в соцсетях</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Расшифровка снимков</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Чат-боты к врачу</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-blue-900/30 to-transparent p-8 rounded-3xl border border-blue-500/20">
+                    <div class="flex items-center gap-3 mb-6"><i class="fas fa-car text-3xl text-blue-400"></i><h3 class="text-2xl font-semibold">Транспорт</h3></div>
+                    <ul class="space-y-4 text-zinc-300">
+                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Навигаторы с пробками</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Автопилот</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-purple-900/30 to-transparent p-8 rounded-3xl border border-purple-500/20">
+                    <div class="flex items-center gap-3 mb-6"><i class="fas fa-gamepad text-3xl text-purple-400"></i><h3 class="text-2xl font-semibold">Развлечения</h3></div>
+                    <ul class="space-y-4 text-zinc-300">
+                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Netflix и Spotify</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i> Алиса и Siri</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ПЛЮСЫ И МИНУСЫ (страница 4) -->
+    <!-- ПЛЮСЫ И МИНУСЫ -->
     <section id="pros" class="py-24 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="section-title text-5xl font-bold mb-16 text-center">Плюсы и минусы ИИ</h2>
-            
             <div class="grid md:grid-cols-2 gap-12">
-                <!-- Плюсы -->
                 <div class="bg-emerald-900/20 border border-emerald-500/30 p-10 rounded-3xl">
-                    <div class="flex items-center gap-3 mb-8">
-                        <i class="fas fa-thumbs-up text-4xl text-emerald-400"></i>
-                        <h3 class="text-3xl font-semibold">Преимущества</h3>
-                    </div>
+                    <div class="flex items-center gap-3 mb-8"><i class="fas fa-thumbs-up text-4xl text-emerald-400"></i><h3 class="text-3xl font-semibold">Преимущества</h3></div>
                     <ul class="space-y-6 text-lg">
-                        <li class="flex gap-4"><span class="text-emerald-400 font-bold">✓</span> Экономит время и автоматизирует рутину</li>
-                        <li class="flex gap-4"><span class="text-emerald-400 font-bold">✓</span> Повышает точность и находит скрытые закономерности</li>
-                        <li class="flex gap-4"><span class="text-emerald-400 font-bold">✓</span> Доступен 24/7 и легко масштабируется</li>
-                        <li class="flex gap-4"><span class="text-emerald-400 font-bold">✓</span> Помогает людям с ОВЗ (субтитры, озвучка)</li>
-                        <li class="flex gap-4"><span class="text-emerald-400 font-bold">✓</span> Создаёт новые профессии и возможности</li>
+                        <li class="flex gap-4"><span class="text-emerald-400 font-bold">✓</span> Экономит время</li>
+                        <li class="flex gap-4"><span class="text-emerald-400 font-bold">✓</span> Повышает точность</li>
+                        <li class="flex gap-4"><span class="text-emerald-400 font-bold">✓</span> Доступен 24/7</li>
+                        <li class="flex gap-4"><span class="text-emerald-400 font-bold">✓</span> Помогает людям с ОВЗ</li>
+                        <li class="flex gap-4"><span class="text-emerald-400 font-bold">✓</span> Создаёт новые профессии</li>
                     </ul>
                 </div>
-                
-                <!-- Минусы -->
                 <div class="bg-orange-900/20 border border-orange-500/30 p-10 rounded-3xl">
-                    <div class="flex items-center gap-3 mb-8">
-                        <i class="fas fa-triangle-exclamation text-4xl text-orange-400"></i>
-                        <h3 class="text-3xl font-semibold">Недостатки и риски</h3>
-                    </div>
+                    <div class="flex items-center gap-3 mb-8"><i class="fas fa-triangle-exclamation text-4xl text-orange-400"></i><h3 class="text-3xl font-semibold">Недостатки</h3></div>
                     <ul class="space-y-6 text-lg">
-                        <li class="flex gap-4"><span class="text-orange-400 font-bold">⚠</span> Ошибки и предвзятость из-за некачественных данных</li>
-                        <li class="flex gap-4"><span class="text-orange-400 font-bold">⚠</span> Риски для приватности и утечки данных</li>
-                        <li class="flex gap-4"><span class="text-orange-400 font-bold">⚠</span> Зависимость от технологий, снижение самостоятельности</li>
-                        <li class="flex gap-4"><span class="text-orange-400 font-bold">⚠</span> Сокращение рутинных профессий</li>
-                        <li class="flex gap-4"><span class="text-orange-400 font-bold">⚠</span> Фейки и дипфейки — сложно отличить правду</li>
+                        <li class="flex gap-4"><span class="text-orange-400 font-bold">⚠</span> Предвзятость данных</li>
+                        <li class="flex gap-4"><span class="text-orange-400 font-bold">⚠</span> Утечки приватности</li>
+                        <li class="flex gap-4"><span class="text-orange-400 font-bold">⚠</span> Зависимость от технологий</li>
+                        <li class="flex gap-4"><span class="text-orange-400 font-bold">⚠</span> Сокращение профессий</li>
+                        <li class="flex gap-4"><span class="text-orange-400 font-bold">⚠</span> Дипфейки</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- БУДУЩЕЕ ИИ (страница 5) -->
+    <!-- БУДУЩЕЕ -->
     <section id="future" class="py-24 bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="section-title text-5xl font-bold mb-4">Будущее ИИ: тренды 2026+</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                 <div class="space-y-6">
-                    <div class="flex gap-6 items-start bg-zinc-900 p-7 rounded-3xl">
-                        <div class="w-10 h-10 bg-blue-500 text-white rounded-2xl flex-shrink-0 flex items-center justify-center text-xl">1</div>
-                        <div>
-                            <h4 class="font-semibold text-xl">ИИ-ассистенты</h4>
-                            <p class="text-zinc-400">Личные «цифровые коллеги» для учёбы и работы</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6 items-start bg-zinc-900 p-7 rounded-3xl">
-                        <div class="w-10 h-10 bg-purple-500 text-white rounded-2xl flex-shrink-0 flex items-center justify-center text-xl">2</div>
-                        <div>
-                            <h4 class="font-semibold text-xl">Генеративное видео</h4>
-                            <p class="text-zinc-400">Создание реалистичных фильмов по текстовому описанию</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6 items-start bg-zinc-900 p-7 rounded-3xl">
-                        <div class="w-10 h-10 bg-pink-500 text-white rounded-2xl flex-shrink-0 flex items-center justify-center text-xl">3</div>
-                        <div>
-                            <h4 class="font-semibold text-xl">Автономные агенты</h4>
-                            <p class="text-zinc-400">Боты, которые сами планируют и выполняют сложные задачи</p>
-                        </div>
-                    </div>
+                    <div class="flex gap-6 items-start bg-zinc-900 p-7 rounded-3xl"><div class="w-10 h-10 bg-emerald-500 text-white rounded-2xl flex items-center justify-center text-xl">1</div><div><h4 class="font-semibold text-xl">ИИ-ассистенты</h4><p class="text-zinc-400">Личные цифровые коллеги</p></div></div>
+                    <div class="flex gap-6 items-start bg-zinc-900 p-7 rounded-3xl"><div class="w-10 h-10 bg-purple-500 text-white rounded-2xl flex items-center justify-center text-xl">2</div><div><h4 class="font-semibold text-xl">Генеративное видео</h4><p class="text-zinc-400">Фильмы по описанию</p></div></div>
+                    <div class="flex gap-6 items-start bg-zinc-900 p-7 rounded-3xl"><div class="w-10 h-10 bg-pink-500 text-white rounded-2xl flex items-center justify-center text-xl">3</div><div><h4 class="font-semibold text-xl">Автономные агенты</h4><p class="text-zinc-400">Боты сами выполняют задачи</p></div></div>
                 </div>
-                
                 <div class="space-y-6">
-                    <div class="flex gap-6 items-start bg-zinc-900 p-7 rounded-3xl">
-                        <div class="w-10 h-10 bg-emerald-500 text-white rounded-2xl flex-shrink-0 flex items-center justify-center text-xl">4</div>
-                        <div>
-                            <h4 class="font-semibold text-xl">Прорывы в медицине</h4>
-                            <p class="text-zinc-400">Сверхточная диагностика и персонализированные лекарства</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6 items-start bg-zinc-900 p-7 rounded-3xl">
-                        <div class="w-10 h-10 bg-amber-500 text-white rounded-2xl flex-shrink-0 flex items-center justify-center text-xl">5</div>
-                        <div>
-                            <h4 class="font-semibold text-xl">Умный транспорт</h4>
-                            <p class="text-zinc-400">Полный автопилот и оптимизация трафика</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6 items-start bg-zinc-900 p-7 rounded-3xl">
-                        <div class="w-10 h-10 bg-cyan-500 text-white rounded-2xl flex-shrink-0 flex items-center justify-center text-xl">6</div>
-                        <div>
-                            <h4 class="font-semibold text-xl">Этика и законы</h4>
-                            <p class="text-zinc-400">Новые правила безопасности, авторского права и прозрачности</p>
-                        </div>
-                    </div>
+                    <div class="flex gap-6 items-start bg-zinc-900 p-7 rounded-3xl"><div class="w-10 h-10 bg-teal-500 text-white rounded-2xl flex items-center justify-center text-xl">4</div><div><h4 class="font-semibold text-xl">Прорывы в медицине</h4><p class="text-zinc-400">Персонализированные лекарства</p></div></div>
+                    <div class="flex gap-6 items-start bg-zinc-900 p-7 rounded-3xl"><div class="w-10 h-10 bg-amber-500 text-white rounded-2xl flex items-center justify-center text-xl">5</div><div><h4 class="font-semibold text-xl">Умный транспорт</h4><p class="text-zinc-400">Полный автопилот</p></div></div>
+                    <div class="flex gap-6 items-start bg-zinc-900 p-7 rounded-3xl"><div class="w-10 h-10 bg-cyan-500 text-white rounded-2xl flex items-center justify-center text-xl">6</div><div><h4 class="font-semibold text-xl">Этика и законы</h4><p class="text-zinc-400">Новые правила безопасности</p></div></div>
                 </div>
             </div>
-            
-            <div class="mt-16 bg-gradient-to-r from-blue-600/10 to-purple-600/10 p-8 rounded-3xl text-center">
-                <p class="text-2xl font-medium">К 2030 году вклад ИИ в мировую экономику может составить до <span class="text-blue-400 font-bold">$15.7 трлн</span></p>
+            <div class="mt-16 bg-gradient-to-r from-emerald-600/10 to-teal-600/10 p-8 rounded-3xl text-center">
+                <p class="text-2xl font-medium">К 2030 году вклад ИИ в экономику — до <span class="text-emerald-400 font-bold">$15.7 трлн</span></p>
             </div>
         </div>
     </section>
 
-    <!-- ВЫВОДЫ (страница 6) -->
+    <!-- ВЫВОДЫ -->
     <section class="py-24 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-12 gap-12">
-                <!-- Главный вывод -->
                 <div class="md:col-span-7 bg-zinc-800/50 p-10 rounded-3xl">
-                    <h3 class="text-3xl font-semibold mb-6 flex items-center gap-3">
-                        <span class="text-blue-400">📌</span> Главный вывод
-                    </h3>
-                    <p class="text-xl leading-relaxed text-zinc-300">
-                        Искусственный интеллект уже помогает нам в учёбе, медицине и творчестве. 
-                        Важно использовать его <span class="font-bold text-white">ответственно</span>: 
-                        как помощника, а не как замену собственному уму.
-                    </p>
+                    <h3 class="text-3xl font-semibold mb-6 flex items-center gap-3"><span class="text-emerald-400">📌</span> Главный вывод</h3>
+                    <p class="text-xl leading-relaxed text-zinc-300">ИИ уже помогает нам в учёбе, медицине и творчестве. Важно использовать его <span class="font-bold text-white">ответственно</span>: как помощника, а не замену уму.</p>
                 </div>
-                
-                <!-- Правила безопасности -->
                 <div class="md:col-span-5 bg-red-900/20 border border-red-400/30 p-10 rounded-3xl">
-                    <h3 class="text-3xl font-semibold mb-6 flex items-center gap-3">
-                        <i class="fas fa-shield-alt text-red-400"></i> Правила безопасности
-                    </h3>
+                    <h3 class="text-3xl font-semibold mb-6 flex items-center gap-3"><i class="fas fa-shield-alt text-red-400"></i> Правила безопасности</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-start gap-4"><span class="text-red-400 text-2xl">1.</span> Берегите личные данные (пароли, адрес)</li>
-                        <li class="flex items-start gap-4"><span class="text-red-400 text-2xl">2.</span> Не верьте всему, что пишет чат-бот</li>
-                        <li class="flex items-start gap-4"><span class="text-red-400 text-2xl">3.</span> Проверяйте источники фото и видео</li>
+                        <li class="flex items-start gap-4"><span class="text-red-400 text-2xl">1.</span> Берегите личные данные</li>
+                        <li class="flex items-start gap-4"><span class="text-red-400 text-2xl">2.</span> Не верьте всему чат-боту</li>
+                        <li class="flex items-start gap-4"><span class="text-red-400 text-2xl">3.</span> Проверяйте фото и видео</li>
                     </ul>
                 </div>
             </div>
-            
-            <!-- Навыки будущего + идея проекта -->
-            <div class="mt-16 grid md:grid-cols-2 gap-8">
-                <div class="bg-zinc-800 p-8 rounded-3xl">
-                    <h4 class="font-semibold text-2xl mb-6">Навыки будущего</h4>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-6 py-3 bg-zinc-700 rounded-3xl text-sm">Критическое мышление</span>
-                        <span class="px-6 py-3 bg-zinc-700 rounded-3xl text-sm">Цифровая гигиена</span>
-                        <span class="px-6 py-3 bg-zinc-700 rounded-3xl text-sm">Основы данных</span>
-                        <span class="px-6 py-3 bg-zinc-700 rounded-3xl text-sm">Фактчекинг</span>
-                    </div>
-                </div>
-                
-                <div class="bg-gradient-to-br from-violet-600/20 to-transparent p-8 rounded-3xl">
-                    <h4 class="font-semibold text-2xl mb-4">Идея мини-проекта</h4>
-                    <p class="mb-6 text-zinc-300">Попробуйте сами:</p>
-                    <ul class="space-y-4">
-                        <li class="flex gap-3"><i class="fas fa-book text-violet-400"></i> Ведите дневник ИИ целую неделю</li>
-                        <li class="flex gap-3"><i class="fas fa-robot text-violet-400"></i> Соберите своего чат-бота в Telegram (без кода)</li>
-                    </ul>
-                </div>
-            </div>
-            
             <div class="mt-20 text-center">
-                <p class="text-zinc-400 text-lg">Вопрос к вам:</p>
-                <p class="text-3xl font-medium mt-3">Как вы планируете использовать возможности ИИ уже сегодня?</p>
+                <p class="text-3xl font-medium">Как вы планируете использовать ИИ уже сегодня?</p>
             </div>
         </div>
     </section>
 
-    <!-- ДИАЛОГ С ИИ (финал) -->
+    <!-- ДИАЛОГ С ИИ (Groq) -->
     <section id="chat" class="py-24 bg-black border-t border-zinc-800">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-5xl font-bold mb-4">Диалог с ИИ</h2>
-                <p class="text-xl text-zinc-400">Задайте любой вопрос про искусственный интеллект — я отвечу на основе проекта!</p>
+                <p class="text-xl text-zinc-400">Теперь на Groq Llama 3.3 70B — бесплатно и очень быстро!</p>
             </div>
             
-            <!-- Чат окно -->
             <div id="chat-window" class="bg-zinc-900 rounded-3xl shadow-2xl border border-zinc-700 h-[520px] flex flex-col overflow-hidden">
-                <!-- Заголовок чата -->
                 <div class="bg-zinc-800 px-6 py-4 flex items-center justify-between border-b border-zinc-700">
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-white text-xl">🧠</div>
+                        <div class="w-9 h-9 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center text-white text-xl">⚡</div>
                         <div>
-                            <p class="font-semibold">Нейро-помощник проекта</p>
-                            <p class="text-xs text-emerald-400 flex items-center gap-1"><span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span> онлайн</p>
+                            <p class="font-semibold">Groq Llama 3.3 70B</p>
+                            <p class="text-xs text-emerald-400 flex items-center gap-1"><span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span> онлайн и бесплатно</p>
                         </div>
                     </div>
-                    <button onclick="clearChat()" class="text-zinc-400 hover:text-white transition-colors">
-                        <i class="fas fa-trash"></i>
-                    </button>
+                    <button onclick="clearChat()" class="text-zinc-400 hover:text-white transition-colors"><i class="fas fa-trash"></i></button>
                 </div>
                 
-                <!-- Сообщения -->
-                <div id="messages" class="flex-1 p-6 overflow-y-auto space-y-6 scrollbar-thin scrollbar-thumb-zinc-700">
-                    <!-- Начальное приветствие добавляется JS -->
-                </div>
+                <div id="messages" class="flex-1 p-6 overflow-y-auto space-y-6 scrollbar-thin scrollbar-thumb-zinc-700"></div>
                 
-                <!-- Поле ввода -->
                 <div class="p-6 border-t border-zinc-700 bg-zinc-900">
                     <div class="flex gap-3">
-                        <input id="user-input" 
-                               type="text" 
-                               placeholder="Спроси про ИИ в жизни..." 
-                               class="flex-1 bg-zinc-800 border border-zinc-700 focus:border-blue-500 rounded-3xl px-6 py-4 outline-none text-white placeholder-zinc-400">
+                        <input id="user-input" type="text" placeholder="Спроси про ИИ в жизни..." 
+                               class="flex-1 bg-zinc-800 border border-zinc-700 focus:border-emerald-500 rounded-3xl px-6 py-4 outline-none text-white placeholder-zinc-400">
                         <button onclick="sendMessage()" 
-                                class="bg-blue-600 hover:bg-blue-500 w-14 h-14 rounded-3xl flex items-center justify-center transition-all active:scale-95">
+                                class="bg-emerald-600 hover:bg-emerald-500 w-14 h-14 rounded-3xl flex items-center justify-center transition-all active:scale-95">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
-                    <p class="text-[10px] text-center text-zinc-500 mt-3">Питание от OpenRouter • DeepSeek V3</p>
+                    <p class="text-[10px] text-center text-zinc-500 mt-3">Питание от Groq • Llama 3.3 70B (бесплатно)</p>
                 </div>
             </div>
         </div>
@@ -420,94 +268,66 @@
     <footer class="bg-zinc-950 py-12 border-t border-zinc-800">
         <div class="max-w-7xl mx-auto px-6 text-center text-xs text-zinc-500">
             <p>Проект 9 класса • Амирзянов Динар Айдарович • 2026</p>
-            <p class="mt-2">Сайт полностью повторяет презентацию в PDF. Диалог работает на реальном ИИ (DeepSeek через OpenRouter).</p>
+            <p class="mt-2">Полностью повторяет PDF-презентацию • Диалог на реальном Groq Llama 3.3</p>
             <p class="mt-6">Сделано с ❤️ для школьного проекта</p>
         </div>
     </footer>
 
     <script>
-        // === TAILWIND INIT ===
-        function initTailwind() {
-            // уже подключён через CDN
-        }
-        
-        // === API НАСТРОЙКИ ===
-        // КЛЮЧ СПРЯТАН ЗДЕСЬ (для школьного проекта нормально, на реальном сайте используй backend)
-        const API_KEY = "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";
-        const API_URL = "https://openrouter.ai/api/v1/chat/completions";
-        const MODEL = "deepseek/deepseek-chat";
-        
+        // ==================== GROQ API (БЕСПЛАТНО) ====================
+        const API_KEY = "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";  // ←←← ВСТАВЬ СВОЙ КЛЮЧ ЗДЕСЬ (gsk_...)
+        const API_URL = "https://api.groq.com/openai/v1/chat/completions";
+        const MODEL = "llama-3.3-70b-versatile";
+
         const SYSTEM_PROMPT = `Ты дружелюбный помощник по теме школьного проекта "ИИ в нашей жизни". 
-        Отвечай на русском языке, коротко, но информативно. Используй примеры из проекта 9 класса. 
-        Никогда не говори, что ты ИИ из OpenRouter — просто будь полезным ассистентом.`;
-        
+        Отвечай на русском языке, коротко, но информативно. Используй примеры из проекта 9 класса Динара.`;
+
         let messages = [
             { role: "system", content: SYSTEM_PROMPT },
-            { role: "assistant", content: "Привет! Я — нейро-помощник из проекта Динара. Спрашивай про ИИ в учёбе, медицине, транспорте или будущем — отвечу с примерами из презентации 😊" }
+            { role: "assistant", content: "Привет! Теперь я на Groq Llama 3.3 70B — супер быстро и бесплатно! Задавай любой вопрос про ИИ из проекта 😊" }
         ];
-        
-        // Рендер сообщений
+
         function renderMessages() {
             const container = document.getElementById("messages");
             container.innerHTML = "";
-            
-            messages.forEach((msg, index) => {
+            messages.forEach(msg => {
                 if (msg.role === "system") return;
-                
                 const div = document.createElement("div");
                 div.className = `flex ${msg.role === "user" ? "justify-end" : "justify-start"}`;
-                
                 if (msg.role === "user") {
-                    div.innerHTML = `
-                        <div class="chat-bubble bg-blue-600 text-white">
-                            ${msg.content}
-                        </div>
-                    `;
+                    div.innerHTML = `<div class="chat-bubble bg-emerald-600 text-white">${msg.content}</div>`;
                 } else {
                     div.innerHTML = `
                         <div class="flex gap-3">
-                            <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex-shrink-0 flex items-center justify-center text-white">🤖</div>
-                            <div class="chat-bubble bg-zinc-800 text-zinc-200">
-                                ${msg.content}
-                            </div>
-                        </div>
-                    `;
+                            <div class="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex-shrink-0 flex items-center justify-center text-white">⚡</div>
+                            <div class="chat-bubble bg-zinc-800 text-zinc-200">${msg.content}</div>
+                        </div>`;
                 }
                 container.appendChild(div);
             });
             container.scrollTop = container.scrollHeight;
         }
-        
-        // Отправка сообщения
+
         async function sendMessage() {
             const input = document.getElementById("user-input");
             const text = input.value.trim();
             if (!text) return;
-            
-            // Добавляем сообщение пользователя
+
             messages.push({ role: "user", content: text });
             renderMessages();
             input.value = "";
-            
-            // Показываем "печатает..."
-            const loadingDiv = document.createElement("div");
-            loadingDiv.id = "loading";
-            loadingDiv.className = "flex justify-start";
-            loadingDiv.innerHTML = `
-                <div class="flex gap-3">
-                    <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex-shrink-0 flex items-center justify-center text-white animate-pulse">🤖</div>
-                    <div class="chat-bubble bg-zinc-800 text-zinc-400">печатает...</div>
-                </div>
-            `;
-            document.getElementById("messages").appendChild(loadingDiv);
-            
+
+            const loading = document.createElement("div");
+            loading.id = "loading";
+            loading.className = "flex justify-start";
+            loading.innerHTML = `<div class="flex gap-3"><div class="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center text-white animate-pulse">⚡</div><div class="chat-bubble bg-zinc-800 text-zinc-400">думаю...</div></div>`;
+            document.getElementById("messages").appendChild(loading);
+
             try {
-                const response = await fetch(API_URL, {
+                const res = await fetch(API_URL, {
                     method: "POST",
                     headers: {
                         "Authorization": `Bearer ${API_KEY}`,
-                        "HTTP-Referer": window.location.href,
-                        "X-Title": "ИИ в нашей жизни - школьный проект",
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
@@ -517,52 +337,35 @@
                         max_tokens: 800
                     })
                 });
-                
-                const data = await response.json();
+
+                if (!res.ok) throw new Error("Ошибка API");
+
+                const data = await res.json();
                 const reply = data.choices[0].message.content;
-                
-                // Удаляем "печатает..."
+
                 document.getElementById("loading").remove();
-                
-                // Добавляем ответ ИИ
                 messages.push({ role: "assistant", content: reply });
                 renderMessages();
-                
+
             } catch (err) {
                 document.getElementById("loading").remove();
-                messages.push({ role: "assistant", content: "Упс! Что-то пошло не так с соединением. Проверь интернет или ключ API." });
+                messages.push({ role: "assistant", content: "Упс! Проверь ключ (gsk_...) или интернет. Groq иногда имеет лимиты." });
                 renderMessages();
             }
         }
-        
+
         function clearChat() {
-            if (confirm("Очистить весь чат?")) {
+            if (confirm("Очистить чат?")) {
                 messages = [
                     { role: "system", content: SYSTEM_PROMPT },
-                    { role: "assistant", content: "Привет! Я — нейро-помощник из проекта Динара. Спрашивай про ИИ в учёбе, медицине, транспорте или будущем — отвечу с примерами из презентации 😊" }
+                    { role: "assistant", content: "Привет! Теперь я на Groq Llama 3.3 70B — супер быстро и бесплатно! Задавай любой вопрос про ИИ из проекта 😊" }
                 ];
                 renderMessages();
             }
         }
-        
-        // Enter для отправки
-        document.getElementById("user-input").addEventListener("keypress", function(e) {
-            if (e.key === "Enter") sendMessage();
-        });
-        
-        // Инициализация
-        window.onload = function() {
-            renderMessages();
-            // Плавный скролл для ссылок
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        };
+
+        document.getElementById("user-input").addEventListener("keypress", e => { if (e.key === "Enter") sendMessage(); });
+        window.onload = () => { renderMessages(); };
     </script>
 </body>
 </html>
